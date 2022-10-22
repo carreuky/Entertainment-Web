@@ -6,6 +6,7 @@ import { TbReportAnalytics } from "react-icons/tb";
 import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
 import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import Selector from "./Selector";
 
 const Sidebar = () => {
   const menus = [
@@ -33,7 +34,7 @@ const Sidebar = () => {
             onClick={() => setOpen(!open)}
           />
         </div>
-        <div className="mt-4 flex flex-col gap-4 relative">
+        <div className=" mt-4 flex flex-col gap-4 relative">
           {menus?.map((menu, i) => (
             <a
               to={menu?.link}
@@ -63,7 +64,7 @@ const Sidebar = () => {
         </div>
       </div>
       <div className="m-3 text-xl text-gray-900 font-semibold">
-        REACT TAILWIND
+        <Selector/>
       </div>
     </section>
   );
